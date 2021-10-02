@@ -130,21 +130,38 @@
         <tbody id="dataLIst">
         <tr th:each="x : ${list}">
             <td>
+<<<<<<< HEAD
                 <input type="checkbox" th:value="${x.id}" />
             </td>
             <td th:text="${x.seq}">1</td>
             <td>
                 <p>
                     <a th:href="${x.url}" th:text="${x.bannerName}" th:target="${x.openId}"></a>
+=======
+                <!-- <input type="checkbox" th:value="${x.id}" /> -->
+            </td>
+            <!-- <td th:text="${x.seq}">1</td> -->
+            <td>
+                <p>
+                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">배너명</a> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </p>
             </td>
             <td>
                 <p>
+<<<<<<< HEAD
                     <img th:src="${x.urlFilename}"/>
                 </p>
             </td>
             <td>
                 <p th:text="${x.regDt}">2021.01.01</p>
+=======
+                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">이미지</a> -->
+                </p>
+            </td>
+            <td>
+                <!-- <p th:text="${x.regDt}">2021.01.01</p> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
             </td>
         </tr>
         </tbody>
@@ -158,9 +175,15 @@
 
 </div>
 
+<<<<<<< HEAD
 <form name="deleteForm" method="post" action="/admin/banner/delete.do">
     <input type="hidden" name="idList"/>
 </form>
+=======
+<!-- <form name="deleteForm" method="post" action="/admin/course/delete.do">
+    <input type="hidden" name="idList"/>
+</form> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
 
 
 </body>

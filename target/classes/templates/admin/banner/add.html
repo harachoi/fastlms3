@@ -54,13 +54,30 @@
             <tr>
                 <th>배너명</th>
                 <td>
+<<<<<<< HEAD
                     <input th:value="${input.bannerName}" type="text" name="bannerName" required placeholder="배너명 입력" />
                 </td>
+=======
+                    <!-- <input th:value="${detail.subject}" type="text" name="subject" required placeholder="강좌명 입력" /> -->
+                </td>
+                <!-- <td>
+                    <select name="categoryId" required>
+                        <option value=""> 카테고리 선택 </option>
+                        <option
+                                th:selected="${detail.categoryId == x.id}"
+                                th:each="x : ${category}" th:value="${x.id}" th:text="${x.categoryName}"> 기획 </option>
+                    </select>
+                </td> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
             </tr>
             <tr>
                 <th>배너 파일</th>
                 <td>
+<<<<<<< HEAD
                     <input type="file" name="file" />
+=======
+                    <!-- <input type="file" name="file" /> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </td>
             </tr>
 
@@ -69,7 +86,11 @@
                     링크 주소
                 </th>
                 <td>
+<<<<<<< HEAD
                     <input th:value="${input.url}" type="text" name="url" required placeholder="링크 주소 입력" />
+=======
+                    <!-- <input th:value="${detail.keyword}" type="text" name="keyword" required placeholder="키워드 입력" /> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </td>
             </tr>
 
@@ -78,6 +99,7 @@
                     오픈 방법
                 </th>
                 <td>
+<<<<<<< HEAD
                     <select name="openId" required>
                         <option value=""> 오픈 방법 선택 </option>
                         <option value="_blank"> 새 창으로 열기 </option>
@@ -85,6 +107,9 @@
                         <option
                                 th:each="input : ${openId}" th:value="${input.openId}" th:text="${input.openId}"> </option>
                     </select>
+=======
+                    <!-- <textarea th:text="${detail.summary}" name="summary" required placeholder="요약문구 입력"></textarea> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </td>
             </tr>
 
@@ -93,7 +118,11 @@
                     정렬 순서
                 </th>
                 <td>
+<<<<<<< HEAD
                     <input th:value="${input.sortValue}" type="text" name="sortValue"/>
+=======
+                    <!-- <textarea th:text="${detail.contents}" id="contents" name="contents" placeholder="내용 입력"></textarea> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </td>
             </tr>
 
@@ -103,8 +132,12 @@
                     공개 여부
                 </th>
                 <td>
+<<<<<<< HEAD
                     <input th:checked="${input.usingYn}" type="checkbox" th:id="'usingYn_' + ${input.id}" th:name="'usingYn_' + ${input.id}" value="true"/>
                     <label th:for="'usingYn_' + ${input.id}">공개</label>
+=======
+                    <!-- <input th:value="${detail.price}" type="text" name="price" required placeholder="정가 입력" /> -->
+>>>>>>> 7ad3cfb5e4b40f5e9351bb0a090e44b484324661
                 </td>
             </tr>
          
