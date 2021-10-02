@@ -130,21 +130,21 @@
         <tbody id="dataLIst">
         <tr th:each="x : ${list}">
             <td>
-                <!-- <input type="checkbox" th:value="${x.id}" /> -->
+                <input type="checkbox" th:value="${x.id}" />
             </td>
-            <!-- <td th:text="${x.seq}">1</td> -->
+            <td th:text="${x.seq}">1</td>
             <td>
                 <p>
-                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">배너명</a> -->
+                    <a th:href="${x.url}" th:text="${x.bannerName}" th:target="${x.openId}"></a>
                 </p>
             </td>
             <td>
                 <p>
-                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">이미지</a> -->
+                    <img th:src="${x.urlFilename}"/>
                 </p>
             </td>
             <td>
-                <!-- <p th:text="${x.regDt}">2021.01.01</p> -->
+                <p th:text="${x.regDt}">2021.01.01</p>
             </td>
         </tr>
         </tbody>
@@ -158,9 +158,9 @@
 
 </div>
 
-<!-- <form name="deleteForm" method="post" action="/admin/course/delete.do">
+<form name="deleteForm" method="post" action="/admin/banner/delete.do">
     <input type="hidden" name="idList"/>
-</form> -->
+</form>
 
 
 </body>
