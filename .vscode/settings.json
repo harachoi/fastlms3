@@ -12,6 +12,19 @@
             "database": "sampledb",
             "username": "sampledb_user",
             "password": "1234"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "127.0.0.1",
+            "port": 3307,
+            "driver": "MariaDB",
+            "name": "sampledb",
+            "database": "sampledb",
+            "username": "sampledb_user",
+            "password": "1234"
         }
     ]
 }

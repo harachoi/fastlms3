@@ -41,7 +41,7 @@
             <include refid="selectListWhere"/>
     </select>
 
-    <select id="selectList" resultType="com.zerobase.fastlms.course.dto.CourseDto">
+    <select id="selectList" resultType="com.zerobase.fastlms.admin.dto.BannerDto">
         select *
         from banner
         where 1 = 1

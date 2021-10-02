@@ -13,7 +13,6 @@ import com.zerobase.fastlms.admin.dto.BannerDto;
 import com.zerobase.fastlms.admin.model.BannerInput;
 import com.zerobase.fastlms.admin.model.BannerParam;
 import com.zerobase.fastlms.admin.service.BannerService;
-import com.zerobase.fastlms.course.controller.BaseController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
