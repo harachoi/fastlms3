@@ -105,7 +105,7 @@
     <div class="buttons">
         <p class="total-count">전체 <span th:text="${totalCount}"></span>개</p>
 
-        <a href="/admin/course/add.do"> 배너 등록 </a>
+        <a href="/admin/banner/add.do"> 배너 등록 </a>
         <button id="deleteButton" type="button"> 선택 삭제 </button>
     </div>
 
@@ -130,21 +130,21 @@
         <tbody id="dataLIst">
         <tr th:each="x : ${list}">
             <td>
-                <input type="checkbox" th:value="${x.id}" />
+                <!-- <input type="checkbox" th:value="${x.id}" /> -->
             </td>
-            <td th:text="${x.seq}">1</td>
+            <!-- <td th:text="${x.seq}">1</td> -->
             <td>
                 <p>
-                    <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">배너명</a>
+                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">배너명</a> -->
                 </p>
             </td>
             <td>
                 <p>
-                    <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">이미지</a>
+                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">이미지</a> -->
                 </p>
             </td>
             <td>
-                <p th:text="${x.regDt}">2021.01.01</p>
+                <!-- <p th:text="${x.regDt}">2021.01.01</p> -->
             </td>
         </tr>
         </tbody>
@@ -158,9 +158,9 @@
 
 </div>
 
-<form name="deleteForm" method="post" action="/admin/course/delete.do">
+<!-- <form name="deleteForm" method="post" action="/admin/course/delete.do">
     <input type="hidden" name="idList"/>
-</form>
+</form> -->
 
 
 </body>
