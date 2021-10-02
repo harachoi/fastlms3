@@ -21,7 +21,8 @@ public class BannerDto {
     String bannerName;
     String filename;
     String urlFilename;
-    long openId;
+    String url;
+    String openId;
     int sortValue;
     boolean usingYn;
 
@@ -31,8 +32,8 @@ public class BannerDto {
 
     public static BannerDto of(Banner banner) {
         return BannerDto.builder().id(banner.getId()).bannerName(banner.getBannerName()).filename(banner.getFilename())
-                .urlFilename(banner.getFilename()).openId(banner.getOpenId()).sortValue(banner.getSortValue())
-                .usingYn(banner.isUsingYn()).regDt(banner.getRegDt()).build();
+                .url(banner.getUrl()).urlFilename(banner.getFilename()).openId(banner.getOpenId())
+                .sortValue(banner.getSortValue()).usingYn(banner.isUsingYn()).regDt(banner.getRegDt()).build();
     }
 
     public static List<BannerDto> of(List<Banner> banners) {

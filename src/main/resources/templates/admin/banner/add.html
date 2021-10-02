@@ -54,7 +54,7 @@
             <tr>
                 <th>배너명</th>
                 <td>
-                    <input th:value="${input.bannerName}" type="text" name="subject" required placeholder="배너명 입력" />
+                    <input th:value="${input.bannerName}" type="text" name="bannerName" required placeholder="배너명 입력" />
                 </td>
             </tr>
             <tr>
@@ -69,7 +69,7 @@
                     링크 주소
                 </th>
                 <td>
-                    <input th:value="${input.urlFilename}" type="text" name="urlFilename" required placeholder="링크 주소 입력" />
+                    <input th:value="${input.url}" type="text" name="url" required placeholder="링크 주소 입력" />
                 </td>
             </tr>
 
@@ -80,8 +80,8 @@
                 <td>
                     <select name="openId" required>
                         <option value=""> 오픈 방법 선택 </option>
-                        <option value="0"> 새 창으로 열기 </option>
-                        <option value="1"> 현재 창에서 열기 </option>
+                        <option value="_blank"> 새 창으로 열기 </option>
+                        <option value=""> 현재 창에서 열기 </option>
                         <option
                                 th:each="input : ${openId}" th:value="${input.openId}" th:text="${input.openId}"> </option>
                     </select>

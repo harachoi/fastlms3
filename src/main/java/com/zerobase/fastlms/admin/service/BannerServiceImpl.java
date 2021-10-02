@@ -41,7 +41,7 @@ public class BannerServiceImpl implements BannerService {
     public boolean add(BannerInput parameter) {
 
         Banner banner = Banner.builder().bannerName(parameter.getBannerName()).filename(parameter.getFilename())
-                .urlFilename(parameter.getUrlFilename()).openId(parameter.getOpenId())
+                .url(parameter.getUrl()).urlFilename(parameter.getUrlFilename()).openId(parameter.getOpenId())
                 .sortValue(parameter.getSortValue()).usingYn(parameter.isUsingYn()).regDt(LocalDate.now()).build();
         bannerRepository.save(banner);
 
@@ -59,6 +59,7 @@ public class BannerServiceImpl implements BannerService {
 
         Banner banner = optionalbanner.get();
         banner.setBannerName(parameter.getBannerName());
+        banner.setUrl(parameter.getUrl());
         banner.setFilename(parameter.getFilename());
         banner.setUrlFilename(parameter.getUrlFilename());
         banner.setOpenId(parameter.getOpenId());

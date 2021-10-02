@@ -11,7 +11,8 @@ public class BannerInput {
     String bannerName;
     String filename;
     String urlFilename;
-    long openId;
+    String url;
+    String openId;
     int sortValue;
     boolean usingYn;
 

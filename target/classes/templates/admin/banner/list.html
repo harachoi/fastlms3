@@ -94,6 +94,16 @@
 
         });
     </script>
+    <script>
+        function open(url, id) {
+            var openVal = id;
+            if (openval == 0) {
+                window.open(url, '_blank');
+            } else {
+                window.open(url);
+            }
+        }
+    </script>
 </head>
 <body>
     <div th:replace="/fragments/layout.html :: fragment-admin-body-menu"></div>
@@ -130,21 +140,44 @@
         <tbody id="dataLIst">
         <tr th:each="x : ${list}">
             <td>
-                <!-- <input type="checkbox" th:value="${x.id}" /> -->
+                <input type="checkbox" th:value="${x.id}" />
             </td>
-            <!-- <td th:text="${x.seq}">1</td> -->
+            <td th:text="${x.seq}">1</td>
             <td>
+                <!-- <form name="moveToURL" method="post">
+                    <input type="hidden" name="${x.url}"/>
+                </form> -->
+
                 <p>
-                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">배너명</a> -->
+                    <!-- <a th:href="'edit.do?url=' + ${x.url}" th:text="${x.bannerName}" th:value="${x.openId}"></a> -->
+                    <!-- <a th:href="${x.url}" th:text="${x.bannerName}" value="_blank"></a> -->
+                    <!-- <a href="https://www.Google.com" th:text="${x.bannerName}" target="_blank"></a>  -->
+                    <!-- <a th:href="${x.url}"th:text="${x.bannerName}" th:value="${x.openId}"></a>  -->
+                    <a th:href="${x.url}" th:text="${x.bannerName}" th:target="${x.openId}"></a>
+
+
+                <!-- <p> -->
+                    <!-- <input type = "button" onclick = "open()" value = "Message Print">   -->
+                    <!-- <a th:href="${x.url}" th:text="${x.bannerName}"  target="${#000.equals(0, 'openId')}" value="_blank"></a>  -->
+                    
+                    <!-- <at th:href="${x.url}" th:checked="${x.usingYn}" th:text="${x.bannerName}" th:name="'usingYn_' + ${x.id}" value="true"/> -->
+
+                    <!-- <option th:selected="${#strings.equals(param.searchType, 'userName')}" value="userName">이름</option>
+                    <a th:href="${x.url}" target="${# .equals(param.searchType, 'userName') }" th:text="${x.bannerName}"></a> -->
+                    <!-- <a href="https://www.Google.com" target="_blank">Gooooooooogle!</a>  -->
+                    <!-- <a th:href="${x.url}" th:text="${x.bannerName}" ></a> -->
+                    <!-- <a th:href="${x.url}" th:text="${x.bannerName}"  target="${#000.equals(0, 'openId')}" value="_blank"></a>  -->
+                    
+                    <!-- <a th:href="'edit.do?url=' + ${x.url}" th:text="${x.bannerName}"></a> -->
                 </p>
             </td>
             <td>
                 <p>
-                    <!-- <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.subject}">이미지</a> -->
+                    <img th:src="${x.urlFilename}"/>
                 </p>
             </td>
             <td>
-                <!-- <p th:text="${x.regDt}">2021.01.01</p> -->
+                <p th:text="${x.regDt}">2021.01.01</p>
             </td>
         </tr>
         </tbody>
@@ -158,9 +191,9 @@
 
 </div>
 
-<!-- <form name="deleteForm" method="post" action="/admin/course/delete.do">
+<form name="deleteForm" method="post" action="/admin/banner/delete.do">
     <input type="hidden" name="idList"/>
-</form> -->
+</form>
 
 
 </body>

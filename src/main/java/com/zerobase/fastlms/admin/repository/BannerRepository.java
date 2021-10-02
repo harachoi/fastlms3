@@ -8,5 +8,5 @@ import java.util.Optional;
 import com.zerobase.fastlms.admin.entity.Banner;
 
 public interface BannerRepository extends JpaRepository<Banner, Long> {
-    Optional<List<Banner>> findByopenId(long openId);
+    // Optional<List<Banner>> findByopenId(long openId);
 }
