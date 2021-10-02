@@ -15,6 +15,7 @@ import com.zerobase.fastlms.admin.repository.BannerRepository;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.data.domain.Sort;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,6 +26,16 @@ public class BannerServiceImpl implements BannerService {
     private final BannerRepository bannerRepository;
     // private final TakebannerRepository takebannerRepository;
     private final BannerMapper bannerMapper;
+
+    private Sort getSortBySortValueDesc() {
+        return Sort.by(Sort.Direction.DESC, "sortValue");
+    }
+
+    @Override
+    public List<BannerDto> list() {
+        List<Banner> banners = bannerRepository.findAll(getSortBySortValueDesc());
+        return BannerDto.of(banners);
+    }
 
     @Override
     public boolean add(BannerInput parameter) {

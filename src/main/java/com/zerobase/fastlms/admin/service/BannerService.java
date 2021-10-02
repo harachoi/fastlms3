@@ -7,6 +7,8 @@ import com.zerobase.fastlms.admin.model.BannerInput;
 import com.zerobase.fastlms.admin.model.BannerParam;
 
 public interface BannerService {
+    List<BannerDto> list();
+
     /**
      * 배너 등록
      */

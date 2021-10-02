@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class BannerParam extends CommonParam {
-    long id;// course.id
-    long bannerId;
+    long id;// banner.id
+    long sortValue;
 }
