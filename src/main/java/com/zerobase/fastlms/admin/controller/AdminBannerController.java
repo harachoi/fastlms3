@@ -61,7 +61,7 @@ public class AdminBannerController extends BaseController {
         // model.addAttribute("open", openService.list());
 
         boolean editMode = request.getRequestURI().contains("/edit.do");
-        BannerDto detail = new BannerDto();
+        BannerDto input = new BannerDto();
 
         if (editMode) {
             long id = parameter.getId();
@@ -71,11 +71,11 @@ public class AdminBannerController extends BaseController {
                 model.addAttribute("message", "강좌정보가 존재하지 않습니다.");
                 return "common/error";
             }
-            detail = existCourse;
+            input = existCourse;
         }
 
         model.addAttribute("editMode", editMode);
-        model.addAttribute("detail", detail);
+        model.addAttribute("input", input);
 
         return "admin/banner/add";
     }
